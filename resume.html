@@ -273,10 +273,62 @@
 
     /* ── Print ── */
     @media print{
-      @page{size:A4;margin:0;}
-      body{background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+      @page{size:A4 portrait;margin:0;}
+      html{zoom:0.72;}
+      body{
+        background:#fff;
+        -webkit-print-color-adjust:exact;
+        print-color-adjust:exact;
+        margin:0;padding:0;
+      }
       .dl-bar{display:none!important;}
-      .page{margin:0;border-radius:0;box-shadow:none;max-width:100%;width:100%;min-height:100vh;}
+      .page{
+        margin:0!important;border-radius:0!important;box-shadow:none!important;
+        max-width:100%!important;width:100%!important;min-height:0!important;
+      }
+      /* Compact sidebar */
+      .sb{padding:22px 18px 20px;gap:16px;}
+      .sb-photo-ring{width:90px;height:90px;}
+      .sb-hdr{margin-bottom:7px;}
+      .sb-divider{margin-bottom:8px;}
+      .sb-ci{margin-bottom:6px;}
+      .sb-ci-text{font-size:10px;}
+      .sb-tech-grid{grid-template-columns:repeat(5,1fr);gap:5px;}
+      .sb-tech-icon{width:30px;height:30px;}
+      .sb-tech-icon img{width:20px;height:20px;}
+      .sb-tech-label{font-size:7.5px;}
+      .sb-lang-item{margin-bottom:5px;}
+      .sb-soft-grid{gap:5px;}
+      .sb-soft-label{font-size:9.5px;}
+      /* Compact main */
+      .mhdr{padding:22px 28px 16px;}
+      .mhdr-name{font-size:38px;}
+      .mhdr-role{font-size:12px;margin-top:4px;}
+      .mhdr-bio{font-size:11px;margin-top:8px;}
+      .mhdr-contacts{margin-top:12px;padding:10px 14px;gap:7px 18px;}
+      .mhdr-ci{font-size:10px;}
+      .mbody{padding:16px 28px;gap:16px;}
+      .sec-hdr{margin-bottom:9px;}
+      /* Timeline */
+      .tl-left{width:76px;min-width:76px;font-size:9px;}
+      .tl-role{font-size:13px;}
+      .tl-company{font-size:10.5px;}
+      .tl-bullets li{font-size:10.5px;}
+      .tl-right{padding-bottom:12px;}
+      /* Projects */
+      .proj-name{font-size:11.5px;}
+      .proj-desc{font-size:10px;}
+      .proj-tag{font-size:8.5px;}
+      /* Education */
+      .edu-deg{font-size:12px;}
+      .edu-school{font-size:10px;}
+      .edu-meta-item{font-size:9.5px;}
+      .edu-grade{font-size:10px;}
+      .edu-item{margin-bottom:10px;}
+      /* Cert */
+      .cert-item{padding:8px 10px;}
+      .cert-title{font-size:10.5px;}
+      .cert-issuer{font-size:9.5px;}
     }
 
     /* ── Responsive ── */
