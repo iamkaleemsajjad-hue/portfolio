@@ -216,13 +216,17 @@ a {
   align-items: center;
   flex-shrink: 0;
 }
+
 .nav-logo-img {
   width: 80px;
   height: 80px;
   object-fit: contain;
   display: block;
 }
-.nav-logo:hover { opacity: 0.85; }
+
+.nav-logo:hover {
+  opacity: 0.85;
+}
 
 .nav-links {
   display: flex;
@@ -352,18 +356,16 @@ a {
   background:
     /* Left-to-right base fade — keeps right side clear */
     linear-gradient(to right,
-      rgba(5,5,5,0.55) 0%,
-      rgba(5,5,5,0.44) 28%,
-      rgba(5,5,5,0.03) 55%,
-      rgba(5,5,5,0.0)  100%
-    ),
+      rgba(5, 5, 5, 0.55) 0%,
+      rgba(5, 5, 5, 0.44) 28%,
+      rgba(5, 5, 5, 0.03) 55%,
+      rgba(5, 5, 5, 0.0) 100%),
     /* Diagonal: top-left corner → bottom-right corner of left half
        Above diagonal = transparent (lighter)
        Below diagonal = dark                                        */
     linear-gradient(to bottom right,
-      transparent            20%,
-      rgba(5,5,5,0.42)       80%
-    );
+      transparent 20%,
+      rgba(5, 5, 5, 0.42) 80%);
 }
 
 .hero-content {
@@ -1461,27 +1463,31 @@ a {
   }
 
   /* ---- Hero mobile fixes ---- */
+  /* my pic.png is 1243x773 (landscape). On portrait mobile, cover zooms in and
+     shows only a narrow center strip (the arm). Use contain to show the full image. */
   .hero-bg-img {
-    background-position: center 50%;
-    background-size: cover;
+    background-size: contain;
+    background-position: center 10%;
+    background-color: #0a0a0a; /* fills gaps around the contained image */
   }
 
-  /* Keep the top (person area) mostly transparent; darken only the bottom (text area) */
+  /* Fully transparent over the photo so the person is visible;
+     darkens ONLY at the bottom where the text sits */
   .hero-overlay {
     background: linear-gradient(
       to bottom,
-      rgba(5,5,5,0.15) 0%,
-      rgba(5,5,5,0.00) 15%,
-      rgba(5,5,5,0.00) 50%,
-      rgba(5,5,5,0.55) 68%,
-      rgba(5,5,5,0.85) 100%
+      rgba(5,5,5,0.0)  0%,
+      rgba(5,5,5,0.0)  58%,
+      rgba(5,5,5,0.65) 70%,
+      rgba(5,5,5,0.92) 100%
     );
   }
 
+  /* Push text to bottom so the person's photo is fully visible above */
   .hero-content {
     display: flex;
     align-items: flex-end;
-    padding-bottom: 6rem;
+    padding-bottom: 5rem;
     padding-top: var(--nav-height);
   }
 
