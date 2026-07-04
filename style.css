@@ -1395,11 +1395,20 @@ a {
   }
 
   .cert-card {
-    grid-template-columns: auto 1fr;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 
   .cert-image-wrapper {
     display: none;
+  }
+
+  .cert-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
   }
 
   .timeline::before {
@@ -1453,7 +1462,8 @@ a {
 
   /* ---- Hero mobile fixes ---- */
   .hero-bg-img {
-    background-position: center 20%;
+    background-position: center 45%;
+    background-size: cover;
   }
 
   .hero-overlay {
