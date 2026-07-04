@@ -1462,24 +1462,26 @@ a {
 
   /* ---- Hero mobile fixes ---- */
   .hero-bg-img {
-    background-position: center 45%;
+    background-position: center 50%;
     background-size: cover;
   }
 
+  /* Keep the top (person area) mostly transparent; darken only the bottom (text area) */
   .hero-overlay {
-    background:
-      linear-gradient(to bottom,
-        rgba(5,5,5,0.55) 0%,
-        rgba(5,5,5,0.35) 40%,
-        rgba(5,5,5,0.60) 70%,
-        rgba(5,5,5,0.75) 100%
-      );
+    background: linear-gradient(
+      to bottom,
+      rgba(5,5,5,0.15) 0%,
+      rgba(5,5,5,0.00) 15%,
+      rgba(5,5,5,0.00) 50%,
+      rgba(5,5,5,0.55) 68%,
+      rgba(5,5,5,0.85) 100%
+    );
   }
 
   .hero-content {
     display: flex;
     align-items: flex-end;
-    padding-bottom: 7rem;
+    padding-bottom: 6rem;
     padding-top: var(--nav-height);
   }
 
@@ -1503,11 +1505,11 @@ a {
   .hero-desc {
     font-size: 0.9rem;
     line-height: 1.65;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
   }
 
   .hero-buttons {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
   }
 
   .about-cards {
