@@ -27,29 +27,19 @@
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     body{font-family:var(--fmain);background:#d1d5db;min-height:100vh;display:flex;flex-direction:column;align-items:center;}
 
-    /* ── Download Bar ── */
-    .dl-bar{
-      width:100%;background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);
-      padding:13px 32px;display:flex;align-items:center;justify-content:space-between;
-      box-shadow:0 4px 20px rgba(0,0,0,.35);position:sticky;top:0;z-index:200;
-    }
-    .dl-brand{display:flex;align-items:center;gap:12px;color:#f8fafc;}
-    .dl-logo{
-      width:36px;height:36px;background:linear-gradient(135deg,var(--orange),#dc2626);
-      border-radius:9px;display:flex;align-items:center;justify-content:center;
-      font-weight:900;font-size:17px;color:#fff;
-    }
-    .dl-info span{font-size:14.5px;font-weight:700;display:block;}
-    .dl-info small{font-size:10.5px;opacity:.45;font-family:var(--fmono);}
+    /* ── Download Button ── */
     .btn-dl{
       display:flex;align-items:center;gap:9px;
       background:linear-gradient(135deg,var(--orange),#dc2626);
-      color:#fff;border:none;padding:10px 24px;border-radius:9px;font-size:13.5px;
+      color:#fff;border:none;padding:14px 36px;border-radius:12px;font-size:14.5px;
       font-weight:700;font-family:var(--fmain);cursor:pointer;
-      box-shadow:0 4px 14px rgba(249,115,22,.4);letter-spacing:.2px;
+      box-shadow:0 4px 20px rgba(249,115,22,.45);letter-spacing:.3px;
       transition:all .2s ease;
     }
-    .btn-dl:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(249,115,22,.5);}
+    .btn-dl:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(249,115,22,.55);}
+    .dl-footer{
+      display:flex;justify-content:center;padding:32px 0 48px;
+    }
 
     /* ── Page ── */
     .page{
@@ -364,19 +354,7 @@
 </head>
 <body>
 
-<!-- Download Bar -->
-<div class="dl-bar">
-  <div class="dl-brand">
-    <div class="dl-logo">K</div>
-    <div class="dl-info">
-      <span>Muhammad Kaleem Sajjad</span>
-      <small>AI/ML Engineer &bull; Full-Stack Developer</small>
-    </div>
-  </div>
-  <button class="btn-dl" onclick="window.print()">
-    <i class="fa-solid fa-download"></i>&nbsp; Download Resume (PDF)
-  </button>
-</div>
+
 
 <!-- Resume Page -->
 <div class="page">
@@ -782,6 +760,13 @@
     </div>
   </main>
 
+</div>
+
+<!-- Download Button -->
+<div class="dl-footer">
+  <button class="btn-dl" onclick="window.print()">
+    <i class="fa-solid fa-download"></i>&nbsp; Download Resume (PDF)
+  </button>
 </div>
 </body>
 </html>
